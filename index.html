@@ -1,0 +1,1713 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="ASSmartSchedule AI - Intelligent College Timetable Conflict Solver and Schedule Optimizer"
+    >
+
+    <title>AS SmartSchedule AI | Intelligent Timetable Optimization</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+<link rel="stylesheet" href="style.css"></head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <div class="brand-text">
+                <strong>ASSmartSchedule</strong>
+                <span>AI Timetable Optimizer</span>
+            </div>
+
+        </a>
+
+        <nav class="desktop-nav">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+
+        </nav>
+
+        <div class="nav-buttons">
+
+            <button class="login-link" onclick="openLogin()">
+                Sign in
+            </button>
+
+            <button class="nav-cta" onclick="openRegister()">
+                Register
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+
+        <button onclick="openLogin()">
+            Sign in
+        </button>
+
+        <button onclick="openRegister()" class="mobile-cta">
+            Register
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="container hero-grid">
+
+        <!-- HERO LEFT -->
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-dot"></span>
+
+                AI-powered scheduling platform
+
+            </div>
+
+
+            <h1>
+                Build smarter
+                <span>college timetables.</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+                Create conflict-free schedules, optimize classrooms,
+                balance faculty workload and generate better timetables
+                in minutes — not hours.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <button
+                    class="primary-button"
+                    onclick="startScheduler()"
+                >
+
+                    Start Scheduling
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToSection('how-it-works')"
+                >
+
+                    <span class="play-icon">
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+
+                    See how it works
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-proof">
+
+                <div class="avatars">
+
+                    <span>AS</span>
+                    <span>RK</span>
+                    <span>PM</span>
+                    <span>+</span>
+
+                </div>
+
+                <div>
+
+                    <strong>500+ schedules optimized</strong>
+
+                    <div class="rating">
+
+                        <span>★★★★★</span>
+
+                        <small>
+                            Trusted by educators
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO RIGHT -->
+
+        <div class="hero-dashboard">
+
+            <div class="dashboard-window">
+
+                <!-- Window Header -->
+
+                <div class="window-header">
+
+                    <div class="window-brand">
+
+                        <div class="mini-logo">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Schedule Overview</strong>
+                            <span>Computer Science · Semester 3</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="window-actions">
+
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-bell"></i>
+                        </button>
+
+                        <div class="profile-circle">
+                            A
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Stats -->
+
+                <div class="dashboard-stats">
+
+                    <div class="dashboard-stat">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Classes</span>
+                            <strong>42</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat">
+
+                        <div class="stat-icon red">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div>
+                            <span>Conflicts</span>
+                            <strong class="danger-number">2</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <span>Efficiency</span>
+                            <strong>96%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Schedule Header -->
+
+                <div class="schedule-toolbar">
+
+                    <div>
+                        <strong>Weekly timetable</strong>
+                        <span>September 14 – 18, 2026</span>
+                    </div>
+
+                    <button>
+                        This week
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Timetable -->
+
+                <div class="timetable-wrapper">
+
+                    <div class="timetable">
+
+                        <!-- Header -->
+
+                        <div class="time-head"></div>
+
+                        <div class="day-head">
+                            MON
+                            <small>14</small>
+                        </div>
+
+                        <div class="day-head">
+                            TUE
+                            <small>15</small>
+                        </div>
+
+                        <div class="day-head">
+                            WED
+                            <small>16</small>
+                        </div>
+
+                        <div class="day-head">
+                            THU
+                            <small>17</small>
+                        </div>
+
+
+                        <!-- Row 1 -->
+
+                        <div class="time">
+                            09:00
+                            <small>AM</small>
+                        </div>
+
+                        <div class="schedule-cell">
+
+                            <div class="class blue-class">
+
+                                <strong>Data Structures</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Dr. Sharma
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 201
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-cell">
+
+                            <div class="class purple-class">
+
+                                <strong>DBMS</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Dr. Verma
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 204
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-cell">
+
+                            <div class="class green-class">
+
+                                <strong>Networks</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Prof. Singh
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 102
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-cell">
+
+                            <div class="class orange-class">
+
+                                <strong>Java</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Prof. Gupta
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Lab 1
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Row 2 -->
+
+                        <div class="time">
+                            10:00
+                            <small>AM</small>
+                        </div>
+
+                        <div class="schedule-cell">
+
+                            <div class="class purple-class">
+
+                                <strong>Operating Systems</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Dr. Verma
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Room 102
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="schedule-cell empty">
+                            Free
+                        </div>
+
+                        <div class="schedule-cell">
+
+                            <div class="class blue-class">
+
+                                <strong>Web Development</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-user"></i>
+                                    Dr. Sharma
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Lab 2
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="schedule-cell empty">
+                            Free
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Dashboard Footer -->
+
+                <div class="dashboard-footer">
+
+                    <div class="optimization-status">
+
+                        <div class="status-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Schedule optimized</strong>
+                            <span>
+                                17 conflicts reduced to 2
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                   <button
+type="button"
+class="optimize-btn"
+onclick="startOptimization()"
+
+>
+
+
+<i class="fa-solid fa-wand-magic-sparkles"></i> 
+
+
+Optimize 
+
+
+</button>
+
+<button
+type="button"
+class="optimize-btn"
+onclick="generateTimetable()"
+
+>
+
+```
+<i class="fa-solid fa-calendar-check"></i> 
+```
+
+```
+Generate Timetable
+```
+
+</button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Floating Cards -->
+
+            <div class="floating-card conflict-floating">
+
+                <div class="floating-icon green">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+                    <strong>Conflict resolved</strong>
+                    <span>Room 204 reassigned</span>
+                </div>
+
+            </div>
+
+
+            <div class="floating-card ai-floating">
+
+                <div class="floating-icon purple">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <div>
+                    <strong>AI suggestion</strong>
+                    <span>Move class to Tuesday</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRUST BAR
+===================================================== -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+        <p>Built for modern educational institutions</p>
+
+        <div class="trust-items">
+
+            <span>
+                <i class="fa-solid fa-building-columns"></i>
+                Universities
+            </span>
+
+            <span>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Colleges
+            </span>
+
+            <span>
+                <i class="fa-solid fa-chalkboard-user"></i>
+                Faculty
+            </span>
+
+            <span>
+                <i class="fa-solid fa-users"></i>
+                Departments
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="section" id="features">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                POWERFUL FEATURES
+            </span>
+
+            <h2>
+                Everything you need to
+                <span>schedule smarter.</span>
+            </h2>
+
+            <p>
+                From timetable creation to conflict resolution,
+                manage your complete scheduling workflow in one place.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <article class="feature-card featured">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <div class="feature-icon blue">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <h3>
+                    Intelligent Timetable
+                </h3>
+
+                <p>
+                    Build weekly schedules using a clean,
+                    visual timetable interface.
+                </p>
+
+                <a href="#">
+                    Explore timetable
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <div class="feature-icon red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <h3>
+                    Conflict Detection
+                </h3>
+
+                <p>
+                    Instantly identify faculty, room, section
+                    and time-slot conflicts.
+                </p>
+
+                <a href="#">
+                    Detect conflicts
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <div class="feature-icon purple">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <h3>
+                    Schedule Optimization
+                </h3>
+
+                <p>
+                    Find better time slots and improve overall
+                    timetable efficiency.
+                </p>
+
+                <a href="#">
+                    Optimize schedule
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    04
+                </div>
+
+                <div class="feature-icon green">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+
+                <h3>
+                    Faculty Management
+                </h3>
+
+                <p>
+                    Track availability, teaching assignments
+                    and workload.
+                </p>
+
+                <a href="#">
+                    Manage faculty
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    05
+                </div>
+
+                <div class="feature-icon orange">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h3>
+                    Room Management
+                </h3>
+
+                <p>
+                    Manage classrooms, laboratories and
+                    room utilization.
+                </p>
+
+                <a href="#">
+                    Manage rooms
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-number">
+                    06
+                </div>
+
+                <div class="feature-icon cyan">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+
+                <h3>
+                    Reports & Analytics
+                </h3>
+
+                <p>
+                    Understand schedule efficiency with
+                    useful reports and insights.
+                </p>
+
+                <a href="#">
+                    View analytics
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="section process-section" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                From complex scheduling to
+                <span>simple optimization.</span>
+            </h2>
+
+            <p>
+                Four simple steps are all it takes to create
+                a better college timetable.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <span>01</span>
+
+                <h3>Add your data</h3>
+
+                <p>
+                    Add subjects, faculty, rooms, sections
+                    and available time slots.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                </div>
+
+                <span>02</span>
+
+                <h3>Create schedule</h3>
+
+                <p>
+                    Build your initial timetable using
+                    the visual scheduling interface.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+
+                <span>03</span>
+
+                <h3>Find conflicts</h3>
+
+                <p>
+                    Automatically scan your schedule
+                    for possible conflicts.
+                </p>
+
+            </div>
+
+
+            <div class="process-line"></div>
+
+
+            <div class="process-card">
+
+                <div class="process-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <span>04</span>
+
+                <h3>Optimize</h3>
+
+                <p>
+                    Apply intelligent suggestions and
+                    generate a more efficient schedule.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ==================== SCHEDULER SECTION ==================== -->
+<section id="scheduler" class="scheduler-section">
+
+    <div class="section-header">
+        <span class="section-tag">SMART SCHEDULER</span>
+        <h2>Create Your College Timetable</h2>
+        <p>
+            Add subjects, teachers, classrooms and time slots
+            to organize your college timetable.
+        </p>
+    </div>
+
+    <div class="scheduler-container">
+
+        <!-- CLASS INPUT FORM -->
+        <div class="scheduler-form-card">
+
+            <h3>
+                <i class="fa-solid fa-calendar-plus"></i>
+                Add a Class
+            </h3>
+
+            <p class="form-description">
+                Enter your class details below.
+            </p>
+
+            <form id="scheduleForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="e.g. Data Structures"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teacher">Teacher</label>
+                        <input
+                            type="text"
+                            id="teacher"
+                            placeholder="e.g. Mr. Sharma"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="room">Classroom / Lab</label>
+                        <input
+                            type="text"
+                            id="room"
+                            placeholder="e.g. Room 101"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="section">Section</label>
+                        <select id="section" required>
+                            <option value="">Select Section</option>
+                            <option value="CSE-A">CSE-A</option>
+                            <option value="CSE-B">CSE-B</option>
+                            <option value="CSE-C">CSE-C</option>
+                            <option value="IT-A">IT-A</option>
+                            <option value="IT-B">IT-B</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="day">Day</label>
+                        <select id="day" required>
+                            <option value="">Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Time Slot</label>
+                        <select id="time" required>
+                            <option value="">Select Time</option>
+                            <option value="09:10-10:05">09:10 - 10:05 AM</option>
+                            <option value="10:10-11:05">10:10 - 11:05 AM</option>
+                            <option value="11:10-12:05">11:10 AM - 12:05 PM</option>
+                            <option value="12:10-13:05">12:10 - 01:05 PM</option>
+                            <option value="13:05-14:00">01:05 - 02:00 PM</option>
+                            <option value="14:00-14:55">02:00 - 02:55 PM</option>
+                            <option value="15:00-15:55">03:00 - 03:55 PM</option>
+                            <option value="16:00-16:55">04:00 - 04:55 PM</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="scheduler-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Class
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- TIMETABLE PREVIEW -->
+        <div class="timetable-card">
+
+            <div class="timetable-header">
+
+                <div>
+                    <span class="section-tag">TIMETABLE PREVIEW</span>
+                    <h3>Your Timetable</h3>
+                </div>
+
+                <button
+                    type="button"
+                    class="optimize-btn"
+                    onclick="startOptimization()"
+                >
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Optimize
+                </button>
+
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div class="timetable-empty" id="timetableEmpty">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <h4>No Classes Added Yet</h4>
+
+                <p>
+                    Add your first class using the form
+                    to start building your timetable.
+                </p>
+
+            </div>
+
+            <!-- TIMETABLE TABLE -->
+            <div class="timetable-wrapper" id="timetableWrapper">
+
+                <table class="scheduler-timetable">
+
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="timetableBody">
+                        <!-- JavaScript will insert classes here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================================
+     ABOUT / OPTIMIZATION
+===================================================== -->
+
+<section class="section optimization-section" id="about">
+
+    <div class="container optimization-grid">
+
+        <div class="optimization-visual">
+
+            <div class="optimization-window">
+
+                <div class="optimization-header">
+
+                    <div>
+                        <span>Optimization Analysis</span>
+                        <strong>Schedule Performance</strong>
+                    </div>
+
+                    <span class="live-badge">
+                        LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="score-area">
+
+                    <div class="score-circle">
+
+                        <svg viewBox="0 0 120 120">
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="50"
+                                class="score-bg"
+                            ></circle>
+
+                            <circle
+                                cx="60"
+                                cy="60"
+                                r="50"
+                                class="score-progress"
+                            ></circle>
+
+                        </svg>
+
+                        <div class="score-text">
+                            <strong>96</strong>
+                            <span>Efficiency</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="optimization-metrics">
+
+                    <div>
+
+                        <span>Before</span>
+
+                        <strong>17</strong>
+
+                        <small>Conflicts</small>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+
+                    <div class="success-metric">
+
+                        <span>After</span>
+
+                        <strong>2</strong>
+
+                        <small>Conflicts</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-list">
+
+                    <div>
+
+                        <div>
+                            <span>Faculty utilization</span>
+                            <b>90%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:90%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div>
+                            <span>Room utilization</span>
+                            <b>82%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:82%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div>
+                            <span>Conflict resolution</span>
+                            <b>96%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:96%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="optimization-content">
+
+            <span class="section-label">
+                SMART OPTIMIZATION
+            </span>
+
+            <h2>
+                Turn timetable
+                <span>problems into solutions.</span>
+            </h2>
+
+            <p>
+                Manually fixing timetable conflicts can take hours.
+                SmartSchedule analyzes your schedule and suggests
+                practical alternatives based on available resources.
+            </p>
+
+
+            <div class="benefit-list">
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Balance faculty workload</strong>
+                        <span>
+                            Avoid overloading individual faculty members.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>Improve room utilization</strong>
+                        <span>
+                            Make better use of classrooms and labs.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <strong>Reduce scheduling conflicts</strong>
+                        <span>
+                            Find suitable alternative time slots.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="startOptimization()"
+            >
+
+                Try Schedule Optimizer
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+    <div class="container cta-box">
+
+        <div class="cta-content">
+
+            <span class="cta-icon">
+                <i class="fa-solid fa-sparkles"></i>
+            </span>
+
+            <h2>
+                Ready to build a smarter timetable?
+            </h2>
+
+            <p>
+                Stop fighting scheduling conflicts.
+                Let SmartSchedule do the heavy lifting.
+            </p>
+
+        </div>
+
+
+        <button
+            class="cta-button"
+            onclick="openRegister()"
+        >
+
+            Get Started Free
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <div class="brand-text">
+                    <strong>SmartSchedule</strong>
+                    <span>AI Timetable Optimizer</span>
+                </div>
+
+            </a>
+
+            <p>
+                Intelligent timetable management for
+                modern educational institutions.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Product</h4>
+
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">Optimization</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Resources</h4>
+
+            <a href="#">Documentation</a>
+            <a href="#">Help Center</a>
+            <a href="#">FAQ</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <a href="#about">About</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 SmartSchedule AI. All rights reserved.
+        </span>
+
+        <span>
+            Built for smarter education.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     LOGIN MODAL
+===================================================== -->
+
+<div class="modal-overlay" id="loginModal">
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('loginModal')"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-logo">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <h2>Welcome back</h2>
+
+        <p>
+            Sign in to your SmartSchedule account.
+        </p>
+
+
+        <form id="loginForm">
+
+            <label>Email address</label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="admin@college.edu"
+                    required
+                >
+
+            </div>
+
+
+            <label>Password</label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button modal-button"
+            >
+                Sign in
+            </button>
+
+        </form>
+
+
+        <p class="modal-switch">
+            Don't have an account?
+
+            <button onclick="switchToRegister()">
+                Create one
+            </button>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     REGISTER MODAL
+===================================================== -->
+
+<div class="modal-overlay" id="registerModal">
+
+    <div class="modal">
+
+        <button
+            class="modal-close"
+            onclick="closeModal('registerModal')"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <div class="modal-logo">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create your account</h2>
+
+        <p>
+            Start optimizing your college timetable.
+        </p>
+
+
+        <form id="registerForm">
+
+            <label>Full name</label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-regular fa-user"></i>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Your full name"
+                    required
+                >
+
+            </div>
+
+
+            <label>Email address</label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="you@college.edu"
+                    required
+                >
+
+            </div>
+
+
+            <label>Password</label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Minimum 6 characters"
+                    minlength="6"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button modal-button"
+            >
+                Create account
+            </button>
+
+        </form>
+
+
+        <p class="modal-switch">
+            Already have an account?
+
+            <button onclick="switchToLogin()">
+                Sign in
+            </button>
+
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast" id="toast">
+
+    <div class="toast-icon">
+        <i class="fa-solid fa-check"></i>
+    </div>
+
+    <div>
+        <strong id="toastTitle">Success</strong>
+        <span id="toastMessage">
+            Operation completed.
+        </span>
+    </div>
+
+    <button onclick="hideToast()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
